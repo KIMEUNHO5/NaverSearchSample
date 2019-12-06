@@ -1,6 +1,7 @@
 package com.gahee.naversearchsample;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
@@ -19,13 +20,15 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView.Adapter adapter;
     private NewsViewModel newsViewModel;
     private SearchView searchView;
+    private ActionBar actionBar;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        getSupportActionBar().setTitle("Naver News Search");
+        actionBar = getSupportActionBar();
+        actionBar.setTitle("Naver News Search");
 
         searchView = findViewById(R.id.search_bar);
         newsViewModel = ViewModelProviders.of(this).get(NewsViewModel.class);
