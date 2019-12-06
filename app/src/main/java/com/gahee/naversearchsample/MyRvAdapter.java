@@ -1,6 +1,7 @@
 package com.gahee.naversearchsample;
 
 import android.content.Context;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,9 +31,9 @@ public class MyRvAdapter extends RecyclerView.Adapter<MyRvAdapter.NewsViewHolder
     @Override
     public void onBindViewHolder(@NonNull NewsViewHolder holder, int position) {
         NewsModel newsModel = newsModelList.get(position);
-        holder.newsTitle.setText(newsModel.getTitle());
-        holder.newsPubDate.setText(newsModel.getPubDate());
-        holder.newsDescription.setText(newsModel.getDescription());
+        holder.newsTitle.setText(Html.fromHtml(newsModel.getTitle()));
+        holder.newsPubDate.setText(Html.fromHtml(newsModel.getPubDate()));
+        holder.newsDescription.setText(Html.fromHtml(newsModel.getDescription()));
     }
 
     @Override
