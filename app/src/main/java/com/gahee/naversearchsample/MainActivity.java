@@ -9,10 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
-import android.view.View;
 import android.widget.SearchView;
-import android.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
